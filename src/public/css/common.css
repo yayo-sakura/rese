@@ -1,0 +1,153 @@
+body {
+    background-color: #EEEEEE;
+}
+
+.header {
+    height: 60px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 20;
+}
+
+.header__inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo-link {
+    text-decoration: none;
+}
+
+/* Rese ロゴ */
+.header-logo-link h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #305DFF;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+/*
+========================================
+  チェックボックスハック (CSSのみで動作)
+========================================
+*/
+/* 1. チェックボックス本体は隠す */
+.menu-check {
+    display: none;
+}
+
+/* 2. ハンバーガーメニューボタン */
+.header-logo__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 40px;
+    background-color: #305DFF;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #aaaaaa;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    z-index: 30; /* 常に最前面に配置 */
+}
+
+.header-logo__btn p {
+    display: block;
+    height: 2px;
+    background-color: white;
+    margin: 0 auto 0 0;
+    transition: all 0.3s;
+}
+
+.header-logo__btn .line-1 {
+    width: 12px; /* 上: 短い */
+}
+
+.header-logo__btn .line-2 {
+    width: 25px; /* 中: 中間 */
+}
+
+.header-logo__btn .line-3 {
+    width: 7px; /* 下: 長い */
+}
+
+/* 3. チェックされた時のボタンのアニメーション (X印) */
+.menu-check:checked ~ .header__inner .header-logo__btn .line-1 {
+    width: 25px; /* Xにする時は長さを揃える */
+    /* 修正：中央で交差するようにY軸移動量を再設定 */
+    transform: translateY(11px) rotate(45deg);
+}
+
+.menu-check:checked ~ .header__inner .header-logo__btn .line-2 {
+    opacity: 0;
+    width: 25px; /* 隠すけど幅は維持 */
+}
+
+.menu-check:checked ~ .header__inner .header-logo__btn .line-3 {
+    width: 25px; /* Xにする時は長さを揃える */
+    /* 修正：中央で交差するようにY軸移動量を再設定 */
+    transform: translateY(-11px) rotate(-45deg);
+}
+
+
+/*
+========================================
+  オーバーレイメニューパネル
+========================================
+*/
+.nav-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    /* 初期状態では左に隠す */
+    transform: translateX(-100vw);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    z-index: 10;
+}
+
+/* 4. チェックされた時のメニューの表示 */
+.menu-check:checked ~ .nav-menu {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 200px;
+    text-align: center;
+}
+
+.nav-item {
+    margin: 40px 0;
+}
+
+.nav-link, .logout-btn {
+    font-size: 32px;
+    font-weight: bold;
+    color: #305DFF;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    display: block;
+}

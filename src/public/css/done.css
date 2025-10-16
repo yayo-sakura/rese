@@ -1,0 +1,25 @@
+.thanks-message {
+    background-color: white;
+    box-shadow: 5px 5px 3px #aaaaaa;
+    width: 500px;
+    height: 350px;
+    border-radius: 5px;
+    margin: 80px auto;
+    text-align: center;
+}
+
+h2 {
+    font-size: 170%;
+    font-weight: 400;
+    padding: 110px 0 20px 0;
+}
+
+.back-btn {
+    border: none;
+    background-color: #305DFF;
+    color: white;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 8px 20px;
+    font-weight: 400;
+}

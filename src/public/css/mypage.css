@@ -1,0 +1,180 @@
+h2 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 36px;
+}
+
+.mypage-reservation {
+    width: 100%;
+    max-width: 450px;
+    flex-shrink: 0;
+}
+
+.mypage-reservation__inner {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    color: white;
+    background-color: #305DFF;
+    box-shadow: 5px 5px 3px #aaaaaa;
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.mypage-reservation__title {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+.mypage-reservation__group  {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.mypage-reservation__group span {
+    font-weight: bold;
+    min-width: 80px;
+    flex-shrink: 0;
+}
+
+.icon-time {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1);
+}
+
+.icon-close {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1);
+}
+
+.close {
+    position: absolute;
+    top: 43px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    
+}
+
+.mypage-reservation__group {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+    padding: 0 5px;
+}
+
+.reservation {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+    margin-left: 0;
+}
+
+.mypage-like {
+    flex: 1;
+    margin-top: 0;
+    width: 100%
+}
+
+.reservation, .like {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.mypage-like__inner--shop {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.1);
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; 
+}
+
+.shop-photo {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.shop {
+    font-weight: 600;
+    font-size: 20px;
+    padding: 10px 15px 5px;
+}
+
+.tag {
+    font-size: 14px;
+    color: #666;
+    padding: 0 15px 10px;
+}
+
+.mypage-inner {
+    display: flex;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.like {
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.mypage-like__inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;  
+}
+
+.shop-detail__btn {
+    background-color: #305DFF;
+    color: white;
+    border-radius: 5px;
+    padding: 8px 18px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.shop-detail__btn:hover {
+    background-color: #244ac5;
+}
+
+.mypage-like__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 15px 15px 15px;
+}
+
+.icon-like {
+    width: 28px;
+    height: 28px;
+}
+
+.like__btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    line-height: 1;
+}

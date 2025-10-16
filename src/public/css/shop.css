@@ -1,0 +1,58 @@
+.shop-list {
+    margin: 80px 250px;
+    width: 100%;
+}
+
+.shop-list__group {
+    display: flex;
+}
+
+.shop-detail__btn {
+    border: none;
+    background-color: #305DFF;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 5px 15px;
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.icon-like {
+    background-color: white;
+    margin-bottom: 5px;
+    margin-left: 150px;
+    
+}
+
+.like__btn {
+   border: none;
+   background-color: white;
+}
+
+.shop-list__inner {
+    width: 350px;
+    height: 320px;
+    border-radius: 5px;
+    margin: 0 20px 50px 0;
+    box-shadow: 5px 5px 3px #aaaaaa;
+    background-color: white;
+    
+}
+
+.shop-photo {
+    width: 350px;
+    height: 160px;
+    border-radius: 5px 5px 0 0;
+}
+
+.shop {
+    font-weight: 600;
+    font-size: 28px;
+    padding-left: 20px;
+}
+
+.tag {
+    padding-left: 20px;
+}
