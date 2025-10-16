@@ -31,7 +31,7 @@ Route::get('/search/name', [ShopController::class, 'searchByName'])->name('shops
 
 Route::get('/thanks', [ThanksController::class, 'index'])->name('thanks');
 
-// Route::middleware(['auth'])->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
     Route::post('/detail/{shop_id}', [ReservationController::class, 'store'])->name('reservation.store'); 
@@ -44,4 +44,4 @@ Route::get('/thanks', [ThanksController::class, 'index'])->name('thanks');
 
     Route::post('/favorite/add', [FavoriteController::class, 'store'])->name('favorite.add');
     Route::post('/favorite/remove', [FavoriteController::class, 'destroy'])->name('favorite.remove');
-// });
+});
